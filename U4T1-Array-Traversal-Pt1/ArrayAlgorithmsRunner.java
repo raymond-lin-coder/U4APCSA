@@ -1,25 +1,54 @@
 public class ArrayAlgorithmsRunner {
     public static void main(String[] args) {
-String word = "Computer Science!";
+int[] nums = {5, 1, 3, 4, 7, 6};
 
-String[] letters = ArrayAlgorithms.stringToArray(word);
+ArrayAlgorithms.shiftLeft(nums);
 
-for (int i = 0; i < letters.length; i++) {
+// original nums array IS modified; all elements shifted left 1
 
-    System.out.print(letters[i]);
+for (int i = 0; i < nums.length; i++) {
+
+    System.out.print(nums[i] + " ");
 
 }
 
 System.out.println();
 
-String word2 = "* ** *** **** ***** ******";
+int[] nums2 = {1, 2, 3, 4, 5, 6, 7, 8};
 
-String[] letters2 = ArrayAlgorithms.stringToArray(word2);
+ArrayAlgorithms.shiftLeft(nums2);
 
-for (int i = 0; i < letters2.length; i++) {
+// original nums2 array IS modified; all elements shifted left 1
 
-    System.out.print(letters2[i]);
+for (int i = 0; i < nums2.length; i++) {
+
+    System.out.print(nums2[i] + " ");
 
 }
+
+System.out.println();
+
+// shift nums2 AGAIN:
+
+ArrayAlgorithms.shiftLeft(nums2);
+
+for (int i = 0; i < nums2.length; i++) {
+
+    System.out.print(nums2[i] + " ");
+
+}
+
+System.out.println();
+
+// shift nums2 A THIRD TIME:
+
+ArrayAlgorithms.shiftLeft(nums2);
+
+for (int i = 0; i < nums2.length; i++) {
+
+    System.out.print(nums2[i] + " ");
+
+}
+
     }
 }

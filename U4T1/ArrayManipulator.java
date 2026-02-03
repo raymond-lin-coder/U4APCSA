@@ -1,17 +1,8 @@
 package U4T1;
-
 public class ArrayManipulator {
-
-  
-
   // instance variables
-
   private int[] nums;
-
   private String[] words;
-
-
-
   /** Constructor that returns a new ArrayManipulator
 
    * @param nums The array of nums
@@ -21,8 +12,6 @@ public class ArrayManipulator {
    */
 
   public ArrayManipulator(int[] nums, int howManyStrings) {
-
-  /* implement this method! */
   this.nums = nums;
   this.words = new String[howManyStrings];
   }
@@ -53,15 +42,13 @@ public class ArrayManipulator {
    */
 
   public int getNumsMiddleIndex() {
-
-  /* implement this method! */
-  if (nums.length % 2 == 1) {
-    return (nums.length / 2);
-  }
-  else {
+    if (nums.length % 2 == 1) {
+      return (nums.length / 2);
+    }
+    else {
     return (nums.length / 2) - 1;
+    }
   }
-}
 
 
 
@@ -80,8 +67,6 @@ public class ArrayManipulator {
    */
 
   public double getNumsAverage() {
-
-  /* implement this method! */
 int middleElement = nums[getNumsMiddleIndex()];
 return (nums[0] + nums[nums.length - 1] + middleElement) / 3.0;
 
@@ -100,7 +85,6 @@ return (nums[0] + nums[nums.length - 1] + middleElement) / 3.0;
 
   public boolean sameLengths() {
 
-  /* implement this method! */
 return nums.length == words.length;
 
   }
@@ -119,17 +103,13 @@ return nums.length == words.length;
    */
 
   public boolean updateWordsListAt(int idx, String newValue) {
-
-  /* implement this method */
-if (idx >= 0 && idx < words.length) {
-    words[idx] = newValue;
-    return true;
-}
-else {
-    return false;
-}
-
-
+    if (idx >= 0 && idx < words.length) {
+      words[idx] = newValue;
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 
   /** Returns the number of characters that are contained in the last element of
@@ -145,8 +125,6 @@ else {
    */
 
   public int howLongLastWord() {
-
-  /* implement this method */
 if (words[words.length - 1] != null) {
     return words[words.length - 1].length();
 }
@@ -168,11 +146,7 @@ else {
    */
 
   public int getNumAt(int idx) {
-
-    /* implement this method */
 return nums[idx];
-
-
   }
 
   
@@ -190,10 +164,6 @@ return nums[idx];
    */
 
   public String getWordAt(int idx) {
-
-    /* implement this method */
 return words[idx];
-
   }
-
 }
