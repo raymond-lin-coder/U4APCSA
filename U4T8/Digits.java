@@ -15,9 +15,15 @@ public class Digits {
      */
     public Digits(int num) {
         /* to be implemented in part (a) */
-        while(num > 0) {
-            digitList.add(0, num % 10);
-            num /= 10;
+        digitList = new ArrayList<Integer>();
+        if (num == 0) {
+            digitList.add(0);
+        }
+        else {
+            while(num > 0) {
+                digitList.add(0, num % 10);
+                num /= 10;
+            }
         }
     }
     
